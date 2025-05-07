@@ -154,7 +154,7 @@ class AppTheme {
       ),
     ),
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: AppColors.darkGray,
+      backgroundColor: Colors.transparent,
     ),
   );
 }

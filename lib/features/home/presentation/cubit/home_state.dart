@@ -1,10 +1,21 @@
-part of 'home_cubit.dart';
+import 'package:equatable/equatable.dart';
+import 'package:movies/core/app_states/base_states.dart';
 
-abstract class HomeState extends Equatable {
-  const HomeState();
+class HomeState extends Equatable {
+  final BaseState? homeState;
+  const HomeState({
+    this.homeState,
+  });
+  HomeState copywith({
+    BaseState? homeState,
+  }) {
+    return HomeState(
+      homeState: homeState ?? this.homeState,
+    );
+  }
 
   @override
-  List<Object> get props => [];
+  List<Object> get props => [
+        homeState ?? const InitialState(),
+      ];
 }
-
-class HomeInitial extends HomeState {}

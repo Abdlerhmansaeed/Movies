@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:movies/core/app_theme/app_colors.dart';
 import 'package:movies/core/constants/app_images.dart';
 

@@ -10,4 +10,5 @@ class Routes {
   static const String contact = '/contact';
   static const String terms = '/terms';
   static const String privacy = '/privacy';
+  static const String movieDetails = '/movieDetails';
 }

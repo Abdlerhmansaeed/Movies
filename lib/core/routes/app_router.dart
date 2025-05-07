@@ -5,6 +5,7 @@ import 'package:movies/core/routes/routes.dart';
 import 'package:movies/features/auth/presentation/pages/login/login_page.dart';
 import 'package:movies/features/auth/presentation/pages/register/register_screen.dart';
 import 'package:movies/features/auth/presentation/pages/register/register_veiw_model.dart';
+import 'package:movies/features/home/presentation/pages/movies_detailes_screen.dart';
 import 'package:movies/features/layout/app_manger/app_cubit.dart';
 import 'package:movies/features/layout/pages/app_layout.dart';
 import 'package:movies/onBoarding/Welcome_page.dart';
@@ -34,6 +35,10 @@ Route<dynamic>? generateRoute(RouteSettings settings) {
     case Routes.layout:
       return MaterialPageRoute(
         builder: (context) => AppLayout(),
+      );
+    case Routes.movieDetails:
+      return MaterialPageRoute(
+        builder: (context) => MoviesDetailesScreen(),
       );
     default:
       return MaterialPageRoute(

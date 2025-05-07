@@ -49,7 +49,7 @@ abstract class DioModule {
   ) {
     final dio = Dio(
       BaseOptions(
-        baseUrl: ApiConfig.moviesBaseUrl, 
+        baseUrl: ApiConfig.moviesBaseUrl,
         connectTimeout: _timeout,
         receiveTimeout: _timeout,
         responseType: ResponseType.json,
@@ -77,7 +77,7 @@ abstract class DioModule {
   ) {
     final dio = Dio(
       BaseOptions(
-        baseUrl: ApiConfig.routeAuthUrl, 
+        baseUrl: ApiConfig.routeAuthUrl,
         connectTimeout: _timeout,
         receiveTimeout: _timeout,
         responseType: ResponseType.json,

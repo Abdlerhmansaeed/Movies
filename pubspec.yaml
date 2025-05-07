@@ -51,6 +51,7 @@ dependencies:
   flutter_screenutil: ^5.9.3
   font_awesome_flutter: ^10.8.0
   carousel_slider: ^5.0.0
+  shimmer:
 
 
 

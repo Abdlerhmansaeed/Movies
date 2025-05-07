@@ -2,7 +2,6 @@ import 'package:equatable/equatable.dart';
 import 'package:movies/features/home/data/models/movies_model/movie.dart';
 import 'package:movies/features/home/data/models/movies_model/torrent.dart';
 
-
 class MovieEntity extends Equatable {
   final int? id;
   final String? imdbCode;
@@ -53,20 +52,25 @@ class MovieEntity extends Equatable {
         backgroundImage,
         torrents,
       ];
-      MovieEntity toEntity(Movie movie) => MovieEntity(
-      id: movie.id?? 0,
-      imdbCode: movie.imdbCode?? '',
-      title: movie.title?? '',
-      titleEnglish: movie.titleEnglish?? '',
-      year: movie.year?? 0,
-      rating: movie.rating?? 0.0,
-      runtime: movie.runtime?? 0,
-      genres: movie.genres?? [],
-      summary: movie.summary?? '',
-      language: movie.language?? '',
-      mpaRating: movie.mpaRating?? '',
-      mediumCoverImage: movie.mediumCoverImage?? '',
-      backgroundImage: movie.backgroundImage?? '',
-      torrents: movie.torrents?? [],
-    );
+
+  factory MovieEntity.fromMovie(Movie movie) => MovieEntity(
+        id: movie.id ?? 0,
+        imdbCode: movie.imdbCode ?? '',
+        title: movie.title ?? '',
+        titleEnglish: movie.titleEnglish ?? '',
+        year: movie.year ?? 0,
+        rating: movie.rating ?? 0.0,
+        runtime: movie.runtime ?? 0,
+        genres: movie.genres ?? [],
+        summary: movie.summary ?? '',
+        language: movie.language ?? '',
+        mpaRating: movie.mpaRating ?? '',
+        mediumCoverImage: movie.mediumCoverImage ?? '',
+        backgroundImage: movie.backgroundImage ?? '',
+        torrents: movie.torrents ?? [],
+      );
+
+  static List<MovieEntity> fromMovieList(List<Movie> movies) {
+    return movies.map((movie) => MovieEntity.fromMovie(movie)).toList();
+  }
 }
