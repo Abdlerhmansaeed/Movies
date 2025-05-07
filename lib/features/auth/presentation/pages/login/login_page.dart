@@ -110,10 +110,6 @@ class _LoginPageContent extends StatelessWidget {
                     ),
                   ],
                 ),
-                if (state is Loading)
-                  const Center(
-                    child: CircularProgressIndicator(color: AppColors.yellow),
-                  ),
               ],
             );
           },

@@ -12,4 +12,6 @@ class AppImages {
   static const String cardTest2 = 'assets/images/card_image2.png';
 
   static const String watchNow = 'assets/images/Watch Now.png';
+  static const String profileImage = 'assets/images/profile_image.png';
+  static const String emptyProfileList = 'assets/images/Empty history_list.png';
 }

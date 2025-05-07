@@ -27,8 +27,11 @@ class RegisterScreen extends StatelessWidget {
       body: BlocListener<RegisterVeiwModel, RegisterStates>(
         bloc: context.read<RegisterVeiwModel>(),
         listener: (context, state) => state.whenOrNull(
-          success: (data) =>
-              Navigator.pushReplacementNamed(context, Routes.layout),
+          success: (data) => Navigator.pushNamedAndRemoveUntil(
+            context,
+            Routes.layout,
+            (route) => false,
+          ),
           loading: () => showDialog(
             context: context,
             builder: (context) {
